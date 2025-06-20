@@ -30,3 +30,27 @@ With the issues mentionned above, the goal of this project was to build a low-co
 
 ## Methodology
 ### Data Collection
+#### Initial Data Collection
+The initial data collection consisted of listing all items sold at the shop and creating a product list sheet in Excel and then performing a physical stockcount to determine the initial stock level of all items. As a result of this process, an Excel sheet ***Product_List*** was created with the following columns: `Product_ID`,	`Product_Name`,	`Unit`,	`Price`,	`Quantity`, and	`Notes`.
+
+
+![image](https://github.com/user-attachments/assets/b1ce786c-4328-4a1b-915d-7f99672c5417)
+
+      
+#### Inventory inflow and outflow data collection
+- To collect inventory inflow which refers to the acquisition of merchandise in the business, an ***Inflow*** sheet was created with the following columns:
+`Date`,	`Product_ID`,	`Product_Name`,	`Unit`, and `Quantity`
+
+![image](https://github.com/user-attachments/assets/7b00223e-ffb9-4118-9a23-2f5af1f199b3)
+
+The Columns `Product_Name` and	`Unit` are autofilled using *VLOOKUP* with the ***Product_List*** sheet as the loolup array and column `Product_ID` as lookup value. What this does is that when there's an Inventory Inflow, the user will just enter the product ID in the the column `Product_ID` and columns `Product_Name` and `Unit` will be autofilled with information linked to the product ID typed. The user will then just enter the quantity in the quantity column.
+
+**NOTE:** I used VLOOKUP back then as I didn't know *XLOOKUP* existed but *XLOOPUP* can be used here and is in fact simplier than *VLOOKUP*.
+
+- To collect inventory outflow 2 sheets were created; the ***Outflow*** sheet to store outflow of inventory going to others shops and the ***Sales*** sheet to store sales data.
+  
+
+![image](https://github.com/user-attachments/assets/adbe46bd-a4ea-408c-adb0-23c48821f447)
+
+
+Cell referencing was also used here to make data entry easy.
